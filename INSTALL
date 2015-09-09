@@ -1,0 +1,48 @@
+The model consists of several folders:
+
+Libraries:
+./tetgen1.4.3 - tetgen used for mesh generation
+./xerces-c-3.1.2 - Apache xerces used for XML parsing
+
+Utilities:
+./mesh - program for generating the model mesh
+./linescan - program for simulating linescans from spark model output
+
+Models:
+./cpu - cpu-based version of the model
+./gpu - gpu-based version of the model
+
+Other:
+./param - folder containing model parameter files
+
+
+**INSTRUCTIONS**
+
+1) First compile the tetgen library:
+>> cd tetgen1.4.3
+>> make tetlib
+
+2) Next compile the xerces-c library and install it in ./xerces-build:
+>> cd ../xerces-c-3.1.2
+>> ./configure --prefix=/path/to/git/root/xerces-build
+>> make install
+
+3) Next compile the mesh program:
+>> cd ../mesh
+>> make
+
+4) Then compile the models:
+>> cd ../cpu
+>> make
+>> cd ../gpu
+>> make
+
+5) If you are using the linescan tool, compile that as well:
+>> cd ../linescan
+>> make
+
+**Command Line Usage Examples**
+
+./mesh -param DefaultMesh.xml -out ../meshes/DefaultMesh
+./cru3d -mesh ../meshes/DefaultMesh -param ../param/DefaultSpark.xml
+./linescan -param DefaultScan.xml
