@@ -2,7 +2,7 @@
 srcdir = .
 top_srcdir = ../../../../..
 top_builddir = ../../../../..
-prefix = /home/mwalker/models/srs_git/xerces-build
+prefix = /home/mwalker/models/srs_git_test/srs/xerces-build
 INSTALL = /usr/bin/install -c
 INSTALL_PROGRAM = ${INSTALL}
 mkdir_p = $(MKDIR_P)

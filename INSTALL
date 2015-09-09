@@ -31,7 +31,7 @@ Other:
 >> cd ../mesh
 >> make
 
-4) Then compile the models:
+4) Then compile the models (GPU version not required):
 >> cd ../cpu
 >> make
 >> cd ../gpu

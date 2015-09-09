@@ -1,4 +1,4 @@
-prefix=/home/mwalker/models/srs_git/xerces-build
+prefix=/home/mwalker/models/srs_git_test/srs/xerces-build
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

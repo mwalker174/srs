@@ -6,12 +6,13 @@ OBJS = main.o
 COMP=g++
 CFLAGS=-O3
 NAME=linescan
+XERCES_DIR=../xerces-build
 
 ##########################################
 #               main program             #
 ##########################################
 all:	$(OBJS)
-	$(COMP) $(OBJS) $(CFLAGS) -L/home/mwalker/models/CRU3D_CPU/xercesc-dist/lib -Wl,-rpath=/home/mwalker/models/CRU3D_CPU/xercesc-dist/lib -lxerces-c -o $(NAME)
+	$(COMP) $(OBJS) $(CFLAGS) -L$(XERCES_DIR)/lib -Wl,-rpath=$(XERCES_DIR)/lib -lxerces-c -o $(NAME)
 
 clean:
 	rm -f *.o $(NAME)
@@ -21,4 +22,4 @@ clean:
 ###########################################
 
 main.o: main.cpp  parameters.h
-	$(COMP) -c $(CFLAGS) -I.. $<
+	$(COMP) -c $(CFLAGS) -I$(XERCES_DIR)/include $<
