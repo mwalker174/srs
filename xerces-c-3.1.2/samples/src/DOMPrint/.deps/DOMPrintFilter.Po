@@ -1,0 +1,140 @@
+src/DOMPrint/DOMPrintFilter.o src/DOMPrint/DOMPrintFilter.o:  \
+ src/DOMPrint/DOMPrintFilter.cpp src/DOMPrint/DOMPrintFilter.hpp \
+  ../src/xercesc/dom/DOMLSSerializerFilter.hpp \
+  ../src/xercesc/dom/DOMNodeFilter.hpp ../src/xercesc/dom/DOMNode.hpp \
+  ../src/xercesc/util/XercesDefs.hpp \
+  ../src/xercesc/util/Xerces_autoconf_config.hpp /usr/include/inttypes.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-64.h /usr/include/stdint.h \
+  /usr/include/bits/wchar.h /usr/include/sys/types.h \
+  /usr/include/bits/types.h \
+  /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h \
+  /usr/include/bits/typesizes.h /usr/include/time.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h ../src/xercesc/util/XercesVersion.hpp \
+  ../src/xercesc/util/XMLUniDefs.hpp ../src/xercesc/util/XMLString.hpp \
+  ../src/xercesc/util/BaseRefVectorOf.hpp \
+  ../src/xercesc/util/ArrayIndexOutOfBoundsException.hpp \
+  ../src/xercesc/util/XMLException.hpp ../src/xercesc/util/XMemory.hpp \
+  /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h /usr/include/xlocale.h \
+  /usr/include/alloca.h ../src/xercesc/util/XMLExceptMsgs.hpp \
+  ../src/xercesc/dom/DOMError.hpp ../src/xercesc/util/XMLUni.hpp \
+  ../src/xercesc/framework/XMLErrorReporter.hpp \
+  ../src/xercesc/util/XMLEnumerator.hpp \
+  ../src/xercesc/util/PlatformUtils.hpp \
+  ../src/xercesc/util/PanicHandler.hpp ../src/xercesc/util/XMLFileMgr.hpp \
+  ../src/xercesc/util/XMLMutexMgr.hpp \
+  ../src/xercesc/framework/MemoryManager.hpp \
+  ../src/xercesc/util/BaseRefVectorOf.c \
+  ../src/xercesc/framework/XMLBuffer.hpp /usr/include/string.h \
+  /usr/include/assert.h
+
+src/DOMPrint/DOMPrintFilter.hpp:
+
+../src/xercesc/dom/DOMLSSerializerFilter.hpp:
+
+../src/xercesc/dom/DOMNodeFilter.hpp:
+
+../src/xercesc/dom/DOMNode.hpp:
+
+../src/xercesc/util/XercesDefs.hpp:
+
+../src/xercesc/util/Xerces_autoconf_config.hpp:
+
+/usr/include/inttypes.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/bits/types.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.1.2/include/stddef.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+../src/xercesc/util/XercesVersion.hpp:
+
+../src/xercesc/util/XMLUniDefs.hpp:
+
+../src/xercesc/util/XMLString.hpp:
+
+../src/xercesc/util/BaseRefVectorOf.hpp:
+
+../src/xercesc/util/ArrayIndexOutOfBoundsException.hpp:
+
+../src/xercesc/util/XMLException.hpp:
+
+../src/xercesc/util/XMemory.hpp:
+
+/usr/include/stdlib.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/alloca.h:
+
+../src/xercesc/util/XMLExceptMsgs.hpp:
+
+../src/xercesc/dom/DOMError.hpp:
+
+../src/xercesc/util/XMLUni.hpp:
+
+../src/xercesc/framework/XMLErrorReporter.hpp:
+
+../src/xercesc/util/XMLEnumerator.hpp:
+
+../src/xercesc/util/PlatformUtils.hpp:
+
+../src/xercesc/util/PanicHandler.hpp:
+
+../src/xercesc/util/XMLFileMgr.hpp:
+
+../src/xercesc/util/XMLMutexMgr.hpp:
+
+../src/xercesc/framework/MemoryManager.hpp:
+
+../src/xercesc/util/BaseRefVectorOf.c:
+
+../src/xercesc/framework/XMLBuffer.hpp:
+
+/usr/include/string.h:
+
+/usr/include/assert.h:

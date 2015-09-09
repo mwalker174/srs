@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<simulation>
+  <parameter>
+    <symbol>V_REFILL</symbol>
+    <definition>jSR refill rate [1/ms]</definition>
+    <label/>
+    <value>0.095</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>ryr_open_max</symbol>
+    <definition>Maximum number of RyRs that can be open before terminating simulation</definition>
+    <label>Max # open RyRs</label>
+    <value>4</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_D_SL</symbol>
+    <definition>Sarcolemma binding site affinity [uM]</definition>
+    <label/>
+    <value>13</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>mesh_file</symbol>
+    <definition>Mesh parameter file</definition>
+    <label>Mesh file</label>
+    <value>RyR_1_1.xml</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_ON_CSQN</symbol>
+    <definition>Calsequestrin on rate [1/uM-ms]</definition>
+    <label/>
+    <value>0.100</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_D_SR</symbol>
+    <definition>SERCA K_D_SR constant [uM]</definition>
+    <label/>
+    <value>2240</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>B_TOT_ATP</symbol>
+    <definition>ATP total concentration [uM]</definition>
+    <label/>
+    <value>455</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_ON_ATP</symbol>
+    <definition>ATP on rate [1/uM-ms]</definition>
+    <label/>
+    <value>0.225</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_K_MINUS</symbol>
+    <definition>RyR close rate constant [1/ms]</definition>
+    <label/>
+    <value>0.100</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>description</symbol>
+    <definition>Brief description of this parameter set</definition>
+    <label>Description</label>
+    <value>Fidelity (not leak) computations for title's RyR geometry with 10ms mean open time.</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>D_ATP</symbol>
+    <definition>ATP diffusion coefficient [um^2/ms]</definition>
+    <label/>
+    <value>0.140</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_OFF_CMDN</symbol>
+    <definition>Calmodulin off rate [1/ms]</definition>
+    <label/>
+    <value>0.238</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_A_STAR</symbol>
+    <definition>RyR coupling strength</definition>
+    <label/>
+    <value>0</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>flag_output_ryr_states</symbol>
+    <definition>Flag to output RyR states</definition>
+    <label>Output RyR states</label>
+    <value>false</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>t_final</symbol>
+    <definition>Simulation end time (ms)</definition>
+    <label>Final time (ms)</label>
+    <value>100</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_ON_TRPN</symbol>
+    <definition>Troponin on rate [1/uM-ms]</definition>
+    <label/>
+    <value>0.039</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>seed_A</symbol>
+    <definition>PRNG seed multiplied with process index</definition>
+    <label>Device seed</label>
+    <value>12783</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_D_I</symbol>
+    <definition>SERCA K_D_i constant [uM]</definition>
+    <label/>
+    <value>910</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>seed_B</symbol>
+    <definition>PRNG seed multiplied with simulation index</definition>
+    <label>Ensemble seed</label>
+    <value>83</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>V_RYR</symbol>
+    <definition>RyR release rate [1/ms]</definition>
+    <label/>
+    <value>3.0e-8</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>flag_nogating</symbol>
+    <definition>Flag to disable channel gating</definition>
+    <label>No channel gating</label>
+    <value>false</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_K_PLUS</symbol>
+    <definition>RyR open rate constant [1/ms]</definition>
+    <label/>
+    <value>0.1107e-3</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>ryr_open_time</symbol>
+    <definition>Amount of time to hold first RyR open for (ms) (optional)</definition>
+    <label>Initial open RyR time (ms)</label>
+    <value/>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>flag_ffwd</symbol>
+    <definition>Flag to enable simulation acceleration until first channel opening (assumes system initially at steady-state)</definition>
+    <label>Skip to first opening</label>
+    <value>false</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>B_TOT_CMDN</symbol>
+    <definition>Calmodulin total concentration [uM]</definition>
+    <label/>
+    <value>24</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_OFF_CSQN</symbol>
+    <definition>Calsequestrin off rate [1/ms]</definition>
+    <label/>
+    <value>63.8</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_ON_DYE</symbol>
+    <definition>Fluo-4N on rate [1/uM-ms]</definition>
+    <label/>
+    <value>0.100</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>B_TOT_SL</symbol>
+    <definition>Sarcolemma binding site density [umol/um^2]</definition>
+    <label/>
+    <value>1.6e-13</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_OFF_ATP</symbol>
+    <definition>ATP off rate [1/ms]</definition>
+    <label/>
+    <value>45</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_EPS_OO</symbol>
+    <definition>RyR open-open coupling interaction</definition>
+    <label/>
+    <value>-0.85</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_OFF_DYE</symbol>
+    <definition>Fluo-4N off rate [1/ms]</definition>
+    <label/>
+    <value>0.110</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>states_interval</symbol>
+    <definition>Time between state outputs (ms)</definition>
+    <label>State output interval (ms)</label>
+    <value>0.01</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>sims_per_proc</symbol>
+    <definition>Number of simulations per processor</definition>
+    <label>Simulations per processor</label>
+    <value>64</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>flag_output_grid</symbol>
+    <definition>Flag to output mesh state</definition>
+    <label>Output mesh state</label>
+    <value>false</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_OFF_TRPN</symbol>
+    <definition>Troponin off rate [1/ms]</definition>
+    <label/>
+    <value>0.020</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>t_clamp</symbol>
+    <definition>Clamp holding time (ms)</definition>
+    <label>Clamp duration (ms)</label>
+    <value>200</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>K_ON_CMDN</symbol>
+    <definition>Calmodulin on rate [1/uM-ms]</definition>
+    <label/>
+    <value>0.034</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>D_CMDN</symbol>
+    <definition>Calmodulin diffusion coefficient [um^2/ms]</definition>
+    <label/>
+    <value>0.025</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>CA_SR</symbol>
+    <definition>Calcium concentration (SR) [uM]</definition>
+    <label/>
+    <value>1000</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>V_M</symbol>
+    <definition>Membrane potential (rest) [mV]</definition>
+    <label/>
+    <value>-80</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>t_step</symbol>
+    <definition>Euler time step size (ms)</definition>
+    <label>Time step (ns)</label>
+    <value>12</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>D_CAJSR</symbol>
+    <definition>Calcium diffusion coefficient (jSR) [um^2/ms]</definition>
+    <label/>
+    <value>0.250</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>D_DYE</symbol>
+    <definition>Fluo-4N diffusion coefficient [um^2/ms]</definition>
+    <label/>
+    <value>0.042</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_EPS_CC</symbol>
+    <definition>RyR closed-closed coupling interaction</definition>
+    <label/>
+    <value>-0.92</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>flag_noflux</symbol>
+    <definition>Flag to enable no-flux boundary conditions</definition>
+    <label>No flux boundaries</label>
+    <value>true</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>D_CA</symbol>
+    <definition>Calcium diffusion coefficient [um^2/ms]</definition>
+    <label/>
+    <value>0.250</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>B_TOT_CSQN</symbol>
+    <definition>Calsequestrin total concentration (jSR) [uM]</definition>
+    <label/>
+    <value>30000</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>paramset_title</symbol>
+    <definition>Title for parameter set</definition>
+    <label>Title</label>
+    <value>Fidelity_MOT10_7x7</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>A_P</symbol>
+    <definition>SERCA A_P constant [uM]</definition>
+    <label/>
+    <value>150</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>v_clamp</symbol>
+    <definition>Clamp membrane potential (mV)</definition>
+    <label>Clamp potential (mV)</label>
+    <value>0</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>CA_I</symbol>
+    <definition>Calcium concentration (cytosol) [uM]</definition>
+    <label/>
+    <value>0.1</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>protocol</symbol>
+    <definition>Simulation protocol type (spark/fidelity/gain)</definition>
+    <label>Select protocol</label>
+    <value>fidelity</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_PHI_N</symbol>
+    <definition>RyR luminal dependence power</definition>
+    <label/>
+    <value>4.0</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>num_procs</symbol>
+    <definition>Number of processors to use</definition>
+    <label># of processors</label>
+    <value>1</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>seed_base</symbol>
+    <definition>Base PRNG seed</definition>
+    <label>Base seed</label>
+    <value>38376427</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>c_min</symbol>
+    <definition>Minimum calcium concentration before terminating simulation (when all RyRs closed)</definition>
+    <label>Min Ca2+ concentration (uM)</label>
+    <value>1.0</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>CA_O</symbol>
+    <definition>Calcium concentration (extracellular) [uM]</definition>
+    <label/>
+    <value>2000</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>ryr_open_init</symbol>
+    <definition>Index of RyR to open initially (optional)</definition>
+    <label>Initially-open RyR</label>
+    <value/>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>flag_use_clock</symbol>
+    <definition>Use clock to initialize the PRNG seed</definition>
+    <label>Use clock seed</label>
+    <value>true</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>grid_interval</symbol>
+    <definition>Time between mesh state outputs (ms)</definition>
+    <label>Mesh state output interval (ms)</label>
+    <value>1.0</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_PHI_KD</symbol>
+    <definition>RyR luminal dependence constant [uM]</definition>
+    <label/>
+    <value>1500</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>B_TOT_DYE</symbol>
+    <definition>Fluo-4N total concentration [uM]</definition>
+    <label/>
+    <value>50</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>B_TOT_TRPN</symbol>
+    <definition>Troponin total concentration [uM]</definition>
+    <label/>
+    <value>70</value>
+    <listable>true</listable>
+  </parameter>
+  <parameter>
+    <symbol>RYR_ETA</symbol>
+    <definition>RyR Hill coefficient</definition>
+    <label/>
+    <value>2.1</value>
+    <listable>true</listable>
+  </parameter>
+</simulation>
