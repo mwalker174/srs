@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<visualization>
+<analysis>
   <parameter>
     <symbol>scan_padding_res</symbol>
     <definition>Spacing between padding points [um]</definition>
@@ -11,7 +11,7 @@
     <symbol>scan_padding_max</symbol>
     <definition>Upper-bound coordinate for domain padding</definition>
     <label>Upper-bound Domain Padding</label>
-    <value>-4</value>
+    <value>4.0</value>
     <listable>false</listable>
   </parameter>
   <parameter>
@@ -22,17 +22,24 @@
     <listable>false</listable>
   </parameter>
   <parameter>
-    <symbol>vis_type</symbol>
-    <definition>Type of visualization</definition>
-    <label>Visualization Type</label>
-    <value>linescan</value>
-    <listable>false</listable>
-  </parameter>
-  <parameter>
     <symbol>scan_var_y</symbol>
     <definition>Variance of point spread function inY direction</definition>
     <label>PSF Y Variance</label>
     <value>0.1154</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>fid_cyto_vol</symbol>
+    <definition>Cytoplasmic volume in liters.</definition>
+    <label>Cytosplasm volume [L]</label>
+    <value>18e-12</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>outdir</symbol>
+    <definition>Path to output files if needed</definition>
+    <label>Output directory</label>
+    <value>.</value>
     <listable>false</listable>
   </parameter>
   <parameter>
@@ -46,28 +53,42 @@
     <symbol>scan_domain_x</symbol>
     <definition>Size of mesh domain in X direction [um]</definition>
     <label>Mesh domain size (X) [um]</label>
-    <value>4</value>
+    <value>4.0</value>
     <listable>false</listable>
   </parameter>
   <parameter>
     <symbol>description</symbol>
-    <definition>Brief description of the visualization</definition>
+    <definition>Brief description of the analysis</definition>
     <label>Description</label>
-    <value/>
+    <value>Generates line scan of a single spark. The line is oriented along the axis of the TT and runs through the center of the subspace.</value>
     <listable>false</listable>
   </parameter>
   <parameter>
     <symbol>scan_c0</symbol>
     <definition>Resting Ca2+ concentration [uM]</definition>
     <label>Resting Ca2+ [uM]</label>
-    <value>0.10</value>
+    <value>0.1</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>summary_t_max</symbol>
+    <definition>Maximum time to plot up to [ms]</definition>
+    <label>Max Time [ms]</label>
+    <value>100</value>
     <listable>false</listable>
   </parameter>
   <parameter>
     <symbol>scan_n</symbol>
     <definition>Total number of scans to simulate</definition>
     <label>Number of scans</label>
-    <value>26</value>
+    <value>251</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>states_file</symbol>
+    <definition>Path to simulation states file</definition>
+    <label>States file</label>
+    <value>states_0_0.out</value>
     <listable>false</listable>
   </parameter>
   <parameter>
@@ -88,14 +109,21 @@
     <symbol>job_file</symbol>
     <definition>Target job file</definition>
     <label>Job File</label>
-    <value>job_DefaultSpark_2013-08-06_11_56_27.396.xml</value>
+    <value>job_DefaultSpark_2013-08-08_12_33_41.109.xml</value>
     <listable>false</listable>
   </parameter>
   <parameter>
     <symbol>scan_gridfile_base</symbol>
     <definition>Simulation's grid output file base path/name</definition>
     <label>Grid file base</label>
-    <value>/home/mwalker/downloads/apache-tomcat-7.0.42/cru3d_files/jobs/DefaultSpark/2013-08-06_11_56_27.396/output/grid_0_0</value>
+    <value>../gpu/output/DefaultSpark_495131627_378/grid_0_0</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>analysis_title</symbol>
+    <definition>Title of analysis</definition>
+    <label>Title</label>
+    <value>DefaultLinescan</value>
     <listable>false</listable>
   </parameter>
   <parameter>
@@ -109,7 +137,7 @@
     <symbol>scan_padding_min</symbol>
     <definition>Lower-bound coordinate for domain padding</definition>
     <label>Lower-bound Domain Padding</label>
-    <value>-4</value>
+    <value>-4.0</value>
     <listable>false</listable>
   </parameter>
   <parameter>
@@ -137,14 +165,28 @@
     <symbol>scan_domain_y</symbol>
     <definition>Size of mesh domain in Y direction [um]</definition>
     <label>Mesh domain size (Y) [um]</label>
-    <value>4</value>
+    <value>4.0</value>
     <listable>false</listable>
   </parameter>
   <parameter>
     <symbol>scan_domain_z</symbol>
     <definition>Size of mesh domain in Z direction [um]</definition>
     <label>Mesh domain size (Z) [um]</label>
-    <value>4</value>
+    <value>4.0</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>gain_sample_interval</symbol>
+    <definition>Resampling interval of raw states output (for plotting purposes only).</definition>
+    <label>Data Sample Interval</label>
+    <value>10</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>fid_ryrs_per_cell</symbol>
+    <definition>Number of RyRs per cell, used for spark rate and leak calculations.</definition>
+    <label>RyRs per cell</label>
+    <value>1.25e6</value>
     <listable>false</listable>
   </parameter>
   <parameter>
@@ -155,10 +197,17 @@
     <listable>false</listable>
   </parameter>
   <parameter>
-    <symbol>vis_title</symbol>
-    <definition>Title of visualization</definition>
-    <label>Title</label>
-    <value>DefaultScan</value>
+    <symbol>summary_sample_interval</symbol>
+    <definition>Resampling interval of raw states output (for plotting purposes only).</definition>
+    <label>Data Sample Interval</label>
+    <value>10</value>
+    <listable>false</listable>
+  </parameter>
+  <parameter>
+    <symbol>analysis_type</symbol>
+    <definition>Type of analysis to perform</definition>
+    <label>Analysis Type</label>
+    <value>linescan</value>
     <listable>false</listable>
   </parameter>
   <parameter>
@@ -172,7 +221,7 @@
     <symbol>scan_f0</symbol>
     <definition>Baseline fluorescence signal (resting Ca-Fluo4n concentration)</definition>
     <label>F0</label>
-    <value>4.1667</value>
+    <value>4.166666666666667</value>
     <listable>false</listable>
   </parameter>
-</visualization>
+</analysis>
