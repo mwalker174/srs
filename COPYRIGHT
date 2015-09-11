@@ -1,0 +1,18 @@
+       ------------------------------------------------------------------
+
+         NOTICE OF COPYRIGHT AND OWNERSHIP OF SOFTWARE
+         Copyright 2015, The Johns Hopkins University
+            School of Medicine. All rights reserved.
+	    For research use only; commercial use prohibited.
+	    Distribution without permission of Raimond L. Winslow
+	    not permitted. rwinslow@bme.jhu.edu
+
+         Name of Program: Superresolution Ca spark model
+         Version: Documented Version, beta
+         Date: Sep 2015
+
+
+      ------------------------------------------------------------------
+
+		This copyright applies to all files in this distribution, 
+		EXCEPT those for the tetgen and Apache xerces libraries.
