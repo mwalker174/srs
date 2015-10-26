@@ -442,6 +442,13 @@ void RunSimulation(SimData* sd, ParamStruct* ps) {
 	double OUTPUT_STATES_INTERVAL = ps->Reals[I_OUTPUT_STATES_INTERVAL];
 	double ca_ss_max = 0;
 
+	//Initialize random seed
+	int seed = 93843 + ps->Integers[I_RAND_SEED_0] + sd->device*ps->Integers[I_RAND_ADD_A] + sd->ensemble_index*ps->Integers[I_RAND_ADD_B];
+	if (ps->Integers[I_FLAG_CLOCK_SEED]) {
+		seed += (int)time(NULL);
+	}
+	srand(seed);
+
 	//Initialize channel residuals
 	for (int i = 0; i < sd->N_Channels; i++) {
 		double runif = ((double)rand())/((double)RAND_MAX);
@@ -450,11 +457,6 @@ void RunSimulation(SimData* sd, ParamStruct* ps) {
 
 	//LCC protocol
 	int bLCC_Open = ps->Integers[I_FLAG_LCC];
-	int seed = 93843 + ps->Integers[I_RAND_SEED_0] + sd->device*ps->Integers[I_RAND_ADD_A] + sd->ensemble_index*ps->Integers[I_RAND_ADD_B];
-	if (ps->Integers[I_FLAG_CLOCK_SEED]) {
-		seed += (int)time(NULL);
-	}
-	srand(seed);
 	double T_LCC_Close = -ps->Reals[I_LCC_DURATION]*log(((double)rand())/((double)RAND_MAX));
 	if (bLCC_Open) {
 		fprintf(stdout,"LCC will be closed at %g ms.\n",T_LCC_Close);
